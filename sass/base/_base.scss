@@ -1,0 +1,43 @@
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // width: 140rem;
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    font-family: $normal-font;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited,
+a:active {
+    color: $nav-color;
+}
+
+.wrapper {
+    max-width: 140rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 850px) {
+    html {
+        font-size: 50%;
+    }
+}
