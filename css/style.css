@@ -35,7 +35,7 @@ a:active {
     font-size: 50%; } }
 
 .header {
-  padding: 1rem;
+  position: relative;
   width: 100%;
   height: 30vh;
   background-image: url("https://w.wallhaven.cc/full/6k/wallhaven-6kj31q.png");
@@ -44,15 +44,24 @@ a:active {
   display: flex;
   justify-content: space-between; }
   .header__heading--primary {
+    letter-spacing: 0.2rem;
     font-family: "Balsamiq Sans", cursive;
     color: #f4f4f4;
     font-size: 4rem;
-    margin: 3rem; }
+    margin: 3rem;
+    margin-top: 6rem; }
   .header__heading--secondary {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
     color: #f4f4f4;
     margin-left: 3rem; }
   .header__nav {
-    display: flex; }
+    z-index: 2000;
+    width: 140rem;
+    padding: 0.8rem;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end; }
   .header__link {
     height: 2.5rem;
     color: #333;
@@ -65,10 +74,94 @@ a:active {
   .header_link:active {
     border-bottom: 0.3rem solid #f4f4f4; }
 
+.blog-thumbnail {
+  border-radius: 0.5rem;
+  width: 25rem;
+  height: 20rem;
+  position: relative;
+  background: #bdb5c1;
+  transition: outline 0.1s;
+  outline-offset: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1); }
+  .blog-thumbnail__first {
+    width: 50rem; }
+  .blog-thumbnail:hover {
+    outline: 0.4rem solid #bdb5c1; }
+  .blog-thumbnail__text-area {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    border-radius: 0.5rem;
+    height: 30%; }
+    .blog-thumbnail__text-area--background {
+      border-radius: inherit;
+      margin-top: 0.2rem;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(125, 100, 151, 0.8);
+      background-image: linear-gradient(to right top, #bdb5c1, #7d6497);
+      clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%); }
+  .blog-thumbnail__img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .blog-thumbnail:hover .blog-thumbnail__heading {
+    transform: scale(1.1); }
+  .blog-thumbnail__img {
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%; }
+  .blog-thumbnail__heading {
+    z-index: 3000;
+    color: #f4f4f4;
+    transition: transform 0.2s; }
+
+.blog {
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60rem; }
+  .blog__title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem; }
+  .blog__img-container {
+    border-radius: 0.5rem;
+    width: 100%; }
+  .blog__img {
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%; }
+  .blog__paragraph {
+    text-align: left;
+    font-weight: 300;
+    margin: 2rem 0;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2.1rem; }
+
 .content {
+  color: #181818;
+  padding: 8rem;
   z-index: 1000;
   border-radius: 5rem;
   margin-top: -5rem;
   background: #f4f4f4;
   width: 100%;
-  height: 100vh; }
+  min-height: 100vh; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }

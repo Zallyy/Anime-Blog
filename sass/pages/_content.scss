@@ -1,0 +1,16 @@
+.content {
+    color: $color-black;
+    padding: 8rem;
+    z-index: 1000;
+    border-radius: 5rem;
+    margin-top: -5rem;
+    background: $color-white;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

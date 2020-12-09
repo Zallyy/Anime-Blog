@@ -1,5 +1,5 @@
 .header {
-    padding: 1rem;
+    position: relative;
     width: 100%;
     height: 30vh;
     background-image: url('https://w.wallhaven.cc/full/6k/wallhaven-6kj31q.png');
@@ -9,17 +9,26 @@
     justify-content: space-between;
 
     &__heading--primary {
+        letter-spacing: 0.2rem;
         font-family: $fancy-font;
         color: $color-white;
         font-size: 4rem;
         margin: 3rem;
+        margin-top: 6rem;
     }
     &__heading--secondary {
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
         color: $color-white;
         margin-left: 3rem;
     }
     &__nav {
+        z-index: 2000;
+        width: 140rem;
+        padding: 0.8rem;
+        position: fixed;
         display: flex;
+        justify-content: flex-end;
     }
     &__link {
         height: 2.5rem;
