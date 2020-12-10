@@ -57,9 +57,9 @@ a:active {
     margin-left: 3rem; }
   .header__nav {
     z-index: 2000;
-    width: 140rem;
+    width: 100%;
     padding: 0.8rem;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: flex-end; }
   .header__link {
@@ -74,24 +74,46 @@ a:active {
   .header_link:active {
     border-bottom: 0.3rem solid #f4f4f4; }
 
-.row {
+.grid {
+  padding: 1rem;
+  overflow: hidden;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5rem; }
+  justify-content: flex-start; }
+  @media (max-width: 800px) {
+    .grid {
+      flex-direction: column;
+      align-items: center; } }
+
+.content {
+  color: #181818;
+  padding: 4rem;
+  z-index: 1000;
+  border-radius: 5rem;
+  margin-top: -5rem;
+  background: #f4f4f4;
+  width: 100%;
+  min-height: 100vh; }
+  @media (max-width: 800px) {
+    .content {
+      padding: 2rem; } }
 
 .blog-thumbnail {
   border-radius: 0.5rem;
-  width: 25rem;
+  flex: 1;
+  flex-basis: 20%;
+  max-width: 25rem;
   height: 20rem;
+  margin: 2rem;
   position: relative;
   background: #bdb5c1;
   transition: outline 0.1s;
   outline-offset: 1.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1); }
   .blog-thumbnail--first {
-    width: 50rem; }
+    flex: 2 0 40%;
+    max-width: 40rem; }
   .blog-thumbnail:hover {
     outline: 0.4rem solid #bdb5c1; }
   .blog-thumbnail__text-area {
@@ -129,6 +151,11 @@ a:active {
     z-index: 3000;
     color: #f4f4f4;
     transition: transform 0.2s; }
+  @media (max-width: 800px) {
+    .blog-thumbnail {
+      height: auto;
+      min-width: 30rem;
+      max-width: 100%; } }
 
 .blog {
   text-align: center;
@@ -137,7 +164,7 @@ a:active {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 60rem; }
+  max-width: 60rem; }
   .blog__title {
     font-size: 2.8rem;
     margin-bottom: 2rem; }
@@ -157,13 +184,3 @@ a:active {
     width: 100%;
     font-size: 1.5rem;
     line-height: 2.1rem; }
-
-.content {
-  color: #181818;
-  padding: 8rem;
-  z-index: 1000;
-  border-radius: 5rem;
-  margin-top: -5rem;
-  background: #f4f4f4;
-  width: 100%;
-  min-height: 100vh; }

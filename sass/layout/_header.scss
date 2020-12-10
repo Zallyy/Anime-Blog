@@ -24,9 +24,9 @@
     }
     &__nav {
         z-index: 2000;
-        width: 140rem;
+        width: 100%;
         padding: 0.8rem;
-        position: fixed;
+        position: absolute;
         display: flex;
         justify-content: flex-end;
     }
