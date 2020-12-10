@@ -74,6 +74,13 @@ a:active {
   .header_link:active {
     border-bottom: 0.3rem solid #f4f4f4; }
 
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5rem; }
+
 .blog-thumbnail {
   border-radius: 0.5rem;
   width: 25rem;
@@ -83,7 +90,7 @@ a:active {
   transition: outline 0.1s;
   outline-offset: 1.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1); }
-  .blog-thumbnail__first {
+  .blog-thumbnail--first {
     width: 50rem; }
   .blog-thumbnail:hover {
     outline: 0.4rem solid #bdb5c1; }
@@ -160,8 +167,3 @@ a:active {
   background: #f4f4f4;
   width: 100%;
   min-height: 100vh; }
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
